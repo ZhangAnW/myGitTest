@@ -1,0 +1,25 @@
+
+例如：
+mainform中弹出窗口，窗口可以更改mainform的控件
+
+//mainform
+
+
+UserManual userManual = new UserManual();//定义子窗口，实例化对象
+public delegate void ChangeAutoShowManualStatus();  //委托
+userManual.AutoShowManualStatus = new ChangeAutoShowManualStatus(AutoShowManual);//初始化类成员委托
+
+//定义函数供委托调用
+ public void AutoShowManual()  //供委托调用
+{
+    启动时自动弹出使用手册ToolStripMenuItem.Checked = true;
+    userManual.autoShow = true;
+}
+
+
+//UserManual
+
+ public ChangeAutoShowManualStatus AutoShowManualStatus;//定义委托
+ 
+ 
+ //调用即可
