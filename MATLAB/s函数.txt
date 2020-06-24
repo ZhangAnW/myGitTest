@@ -1,0 +1,21 @@
+https://blog.csdn.net/acelit/article/details/59082349
+s函数各变量详解
+最基本的C语言S-function模板：
+
+#define S_FUNCTION_NAME name
+#define S_FUNCTION_LEVEL 2  //定义s-function级别 1级为老版本
+#include"simstruc.h"  //必须包含，SimStruc是Simulink提供的数据结构
+//..C语言库中的头文件
+static void mdlInitializeSizes(SimStruct *S){}
+static void mdlInitializeSampleTimes(SimStruct *S){}
+static void mdlOutputs(SimStruct *S,int_T tid){}
+static void mdlTerminate(SimStruct *S){}
+#ifdef MATLAB_MEX_FILE
+#include"Simulink.c"//用于仿真
+#else
+#include"cg_sfun.h"//用于RTW代码生成（非内嵌的S函数）
+#endif
+//内嵌的S函数需要在代码中添加mdlRTW()和额外编写TLC文件
+————————————————
+版权声明：本文为CSDN博主「Rose33」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/abc123456789abca/article/details/76684696
