@@ -4,7 +4,7 @@
 
 - [ ] 
 
-- [x] 
+- [ ] 
 
 
 
@@ -51,6 +51,8 @@ Markdown是一种纯文本格式的标记语言。通过简单的标记语法，
 
 ==我高亮了==
 
+
+
 **这是加粗的文字** CTRL + B
 
 *这是倾斜的文字*` CTRL + I
@@ -79,9 +81,14 @@ Markdown是一种纯文本格式的标记语言。通过简单的标记语法，
 ***
 *****
 
->上下标2^2^ H~2~o
+>上下标 2^2^  H~2~o
+>
+>H~2~0
 
 ## 图片
+
+
+
 语法：
 
 ![数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark](数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark '描述信息')
@@ -219,7 +226,10 @@ cond(no)->op
 ```
 ## 内嵌数学公式 
 
-$\sum_{i=1}^{10}f(i)\,\,\text{thanks}$
+$$
+\sum_{i=1}^{10}f(i)\,\,\text{thanks}
+$$
+
 $$
 \mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
